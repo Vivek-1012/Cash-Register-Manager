@@ -22,11 +22,12 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
  function calculateChange(amountToBeReturned) {
     //go all the availabe 
      for(let i = 0; i < availableNotes.length; i++) {
+       // no over all the available for the denomination
         const numberOfNotes = Math.trunc(
         amountToBeReturned / availableNotes[i])
      ;
-
-     amountToBeReturned %= availableNotes[i];
+    // amount left after cal the number of notes needed
+     amountToBeReturned = amountToBeReturned % availableNotes[i];
      noOfNotes[i].innerText = numberOfNotes; 
      }
  
@@ -41,4 +42,4 @@ function showMessage(msg) {
     message.innerText = msg;
 }
 
- 
+// 
