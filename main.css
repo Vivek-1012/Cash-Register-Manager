@@ -44,3 +44,7 @@ body {
     border-color: var(--primary--light);
     border-radius: 1rem;
 }
+
+table, th, td {
+    border: 1px solid;
+  }
