@@ -11,6 +11,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
         if (cashGiven.value >= billAmount.value) {
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
+            showMessage("Total amount to be returned : " + amountToBeReturned )
         } else {
             showMessage(
                 "Do you wanna wash plates?");
