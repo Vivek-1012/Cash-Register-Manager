@@ -12,11 +12,14 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
             showMessage("Total change to be returned : " + amountToBeReturned )
-        } else {
+        } else if (billAmount.value > cashGiven.value){
+            showMessage("Cash is not sufficient 😮‍💨, Do you wanna wash plates? ")
+        } 
+        else {
             showMessage(
                 "Do you wanna wash plates?");
    } } else {
-       showMessage("Invalid Bill Amount");
+       showMessage("Invalid Bill Amount ( Check inputs )");
    } 
 });
 // processing part
